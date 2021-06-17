@@ -27,8 +27,8 @@ SECRET_KEY = 'nib&enp67*9-%a=_3m(^^%gfyunf7+=c*px-ihjf@%qs1eqdv#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-#
-# ALLOWED_HOSTS = []
+
+# ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 # Application definition
@@ -157,6 +157,8 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
  )
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 SITE_ID = 1
 
