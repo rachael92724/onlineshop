@@ -20,11 +20,14 @@
         <div class="row">
             {% for product  in products %}
             <div class="col-4">
-                <div class="card">
+                <div class="card border-info mb-3" style="max-width: 18rem;">
                     <img class="card-img-top" src="{{product.image.url}}" alt="Product image">
                     <div class="card-body">
                         <h5 class="card-title">{{product.name}}</h5>
-                        <p class="card-text">{{product.description}}<span class="badge badge-secondary">${{product.price}}</span> </p>
+                        <p class="card-text">{{product.description}}</p>
+                        <p> <span class="badge badge-secondary">
+                            {% load humanize %}
+                            &#8361;{{product.price | floatformat:'0' | intcomma}}</span></p>
                         <a href="{{product.get_absolute_url}}" class="btn btn-primary">View Detail</a>
                     </div>
                 </div>

@@ -1,0 +1,22 @@
+body {
+    background: #d9f1f1;
+    font-size: 12pt;
+}
+
+.nav-link {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.container {
+    padding: 20px;
+}
+
+.card-title, .display-6, th  {
+    font-weight: bold;
+    color: #447e9b;
+}
+
+.detail_img {
+    border: 1px solid #447e9b;
+}
